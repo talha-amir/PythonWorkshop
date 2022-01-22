@@ -1,0 +1,8 @@
+22-01-2022 05:08:24 - [INFO] -  root - (main.py).<module>(16) - An info message
+22-01-2022 05:08:24 - [WARNING] -  root - (main.py).<module>(17) - Something is not right.
+22-01-2022 05:08:24 - [ERROR] -  root - (main.py).<module>(18) - A Major error has happened.
+22-01-2022 05:08:24 - [CRITICAL] -  root - (main.py).<module>(19) - Fatal error. Cannot continue
+22-01-2022 05:08:35 - [INFO] -  root - (main.py).<module>(16) - An info message
+22-01-2022 05:08:35 - [WARNING] -  root - (main.py).<module>(17) - Something is not right.
+22-01-2022 05:08:35 - [ERROR] -  root - (main.py).<module>(18) - A Major error has happened.
+22-01-2022 05:08:35 - [CRITICAL] -  root - (main.py).<module>(19) - Fatal error. Cannot continue
