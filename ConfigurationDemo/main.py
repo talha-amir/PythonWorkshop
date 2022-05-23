@@ -4,8 +4,7 @@ from sqlite3 import Error
 
 def create_connection(db_file):
     try:
-        conn = sqlite3.connect(db_file)
-        return conn
+        return sqlite3.connect(db_file)
     except Error as e:
         print(e)
 
@@ -48,14 +47,6 @@ def main():
 
     database = config['PATH']['DB_PATH']
 
-    sql_create_employee_table = """
-        CREATE TABLE IF NOT EXISTS Employee(
-            ID              INTEGER     PRIMARY KEY     NOT NULL    ,
-            Fname           TEXT                        NOT NULL    ,
-            Lname           TEXT                        NOT NULL
-        );
-    """
-
     sql_create_employee_row = "INSERT OR IGNORE INTO Employee(ID, Fname, Lname) VALUES(?, ?, ?);"
 
     # create a database connection
@@ -63,6 +54,14 @@ def main():
 
     # create tables
     if conn is not None:
+        sql_create_employee_table = """
+        CREATE TABLE IF NOT EXISTS Employee(
+            ID              INTEGER     PRIMARY KEY     NOT NULL    ,
+            Fname           TEXT                        NOT NULL    ,
+            Lname           TEXT                        NOT NULL
+        );
+    """
+
         # create employee table
         create_table(conn, sql_create_employee_table)
     else:
